@@ -35,7 +35,7 @@ class Solution:
         pm = False
         first = int(input_time[:2])
         last = (input_time[3:])
-        if first >= 12:
+        if first > 12:
             first = first - 12
             pm = True
         str = "It's " + nums[first] + " "
@@ -49,7 +49,7 @@ class Solution:
                 str += nums[int((last)[1])] + " "
         else:
             str += nums[int(last)] + " "
-        if pm:
+        if pm or (first == 12 and last == "05"):
             str += "pm"
         else:                
             str += "am"
