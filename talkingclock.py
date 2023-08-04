@@ -42,11 +42,11 @@ class Solution:
         if last == "00":
              pass
         elif last[0] != "1":
-            str += numsdigit[(last)[0]] + " "
+            str += numsdigit[int((last)[0])] + " "
             if last[1] != "0":
-                str += nums[(last)[1]] + " "
+                str += nums[int((last)[1])] + " "
         else:
-            str += nums[last[1]] + " "
+            str += nums[int(last[1])] + " "
         if pm:
             str += "pm"
         else:                
