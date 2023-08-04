@@ -34,17 +34,17 @@ class Solution:
         numsdigit = ["oh", "twenty", "thirty", "forty", "fifty"]
         pm = False
         first = int(input_time[:2])
-        last = int(input_time[3:])
+        last = (input_time[3:])
         if first > 12:
             first = first - 12
             pm = True
         str = "It's " + nums[first] + " "
             
-        if last == 0:
+        if last == "0":
             pass
         else:
-            str += numsdigit[str(last)[0]]
-            str += nums[str(last)[1]]
+            str += numsdigit[int((last)[0])]
+            str += nums[int((last)[1])]
         if pm:
             str += " " + "pm"
         else:
