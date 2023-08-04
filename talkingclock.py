@@ -30,11 +30,32 @@ Input: 12:05  Output: It's twelve oh five pm
     # This will convert military hours to regular hours, and determine AM vs PM
 class Solution:    
     def ClockTalker(self, input_time):
+        nums = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+        numsdigit = ["oh", "twenty", "thirty", "forty", "fifty"]
+        pm = False
+        first = int(input_time[:2])
+        last = int(input_time[3:])
+        if first > 12:
+            first = first - 12
+            pm = True
+        str = "It's " + nums[first] + " "
+            
+        if last == 0:
+             pass
+        else:
+            str += numsdigit[last[0]]
+            str += nums[last[1]]
+        if pm:
+            str += " ", "pm"
+        else:
+            str += " ", "am"
+        print(str)
+        return str
             #type input_time: string
             #return type: string
             
             #TODO: Write code below to return a string with the solution to the prompt.
-            pass
+            
 
 def main():
      str1=input()
