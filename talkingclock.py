@@ -39,16 +39,18 @@ class Solution:
             first = first - 12
             pm = True
         str = "It's " + nums[first] + " "
-            
-        if last == "0":
-            pass
+        if last == "00":
+             pass
+        elif last[0] != "1":
+            str += numsdigit[(last)[0]] + " "
+            if last[1] != "0":
+                str += nums[(last)[1]] + " "
         else:
-            str += numsdigit[int((last)[0])] + " "
-            str += nums[int((last)[1])]
+            str += nums[last[1]] + " "
         if pm:
-            str += " " + "pm"
-        else:
-            str += " " + "am"
+            str += "pm"
+        else:                
+            str += "am"
         print(str)
         return str
             #type input_time: string
