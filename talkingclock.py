@@ -41,14 +41,14 @@ class Solution:
         str = "It's " + nums[first] + " "
             
         if last == 0:
-             pass
+            pass
         else:
-            str += numsdigit[last[0]]
-            str += nums[last[1]]
+            str += numsdigit[str(last)[0]]
+            str += nums[str(last)[1]]
         if pm:
-            str += " ", "pm"
+            str += " " + "pm"
         else:
-            str += " ", "am"
+            str += " " + "am"
         print(str)
         return str
             #type input_time: string
