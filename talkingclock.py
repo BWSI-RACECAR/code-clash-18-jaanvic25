@@ -40,18 +40,22 @@ class Solution:
             pm = True
         str = "It's " + nums[first] + " "
         if last == "00":
-             pass
+            if first == 12:
+                return ("It's twelve pm")
+            pass
         elif last[0] != "1":
             str += numsdigit[int((last)[0])] + " "
             if last[1] != "0":
                 str += nums[int((last)[1])] + " "
         else:
-            str += nums[int(last[1])] + " "
+            str += nums[int(last)] + " "
         if pm:
             str += "pm"
         else:                
             str += "am"
         print(str)
+        if first + int(last) == 0:
+            return "It's twelve am"
         return str
             #type input_time: string
             #return type: string
