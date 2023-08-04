@@ -31,7 +31,7 @@ Input: 12:05  Output: It's twelve oh five pm
 class Solution:    
     def ClockTalker(self, input_time):
         nums = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
-        numsdigit = ["oh", "twenty", "thirty", "forty", "fifty"]
+        numsdigit = ["oh", " ", "twenty", "thirty", "forty", "fifty"]
         pm = False
         first = int(input_time[:2])
         last = (input_time[3:])
@@ -43,7 +43,7 @@ class Solution:
         if last == "0":
             pass
         else:
-            str += numsdigit[int((last)[0])]
+            str += numsdigit[int((last)[0])] + " "
             str += nums[int((last)[1])]
         if pm:
             str += " " + "pm"
